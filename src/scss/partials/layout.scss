@@ -10,6 +10,13 @@
 
 /* General */
 
+.section_wrapper{
+  box-sizing: border-box;
+  padding:10% 0 0 0;
+  width: 728px;
+  margin: 0 auto;
+}
+
 body, html {
     font-family: "Muli";
     font-weight: 300;
@@ -22,11 +29,10 @@ h1 {
     font-family: "Muli";
     font-size: 67px;
     font-weight: 200;
-    color: #199cb6;
+    color: #ffffff;
     margin: 0px;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 0px;
+    padding: 0;
 }
 h2 {
   font-size:32px;
@@ -34,9 +40,6 @@ h2 {
   color:#000000;
   margin-top:27px;
   margin-bottom:8px;
-}
-#content{
-  padding:20px 20px 80px 20px;
 }
 input[type="text"], input[type="email"], input[type="url"] {
     border: 2px solid #FFF;
@@ -89,20 +92,8 @@ input[type="submit"]:disabled {
 }
 
 /* Layout */
-.small_background {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    max-width: 450px;
-    height: 100%;
-    background-image: url(../images/bg_desktop.jpg);
-    background-position: 100% 0px;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 .full_content {
-    padding-left: 450px;
     width: 100%;
     vertical-align: middle;
     display: table-cell;
@@ -182,12 +173,6 @@ section {
     h1 {
         font-size: 60px;
     }
-    .small_background {
-        max-width: 315px;
-    }
-    .full_content {
-        padding-left: 315px;
-    }
     #questions {
         margin-top: 0px;
     }
@@ -210,15 +195,6 @@ section {
     }
 }
 @media (max-width: 768px) {
-    .small_background {
-        display: none;
-    }
-    .full_content {
-        padding: 0px;
-        background: url(../images/bg_mobile.jpg) no-repeat;
-        background-size: cover;
-        background-position: 0px -420px;
-    }
     h1 {
         padding-top: 90px;
     }

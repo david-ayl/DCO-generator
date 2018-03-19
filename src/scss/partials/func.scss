@@ -1,0 +1,8 @@
+
+
+@mixin circle($width) {
+  display:block;
+  width: $width;
+  height: $width;
+  border-radius:50%;
+}

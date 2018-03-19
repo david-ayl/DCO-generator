@@ -1,2 +1,46 @@
 @import "partials/layout.scss";
 @import "partials/loader.scss";
+@import "partials/parameters.scss";
+@import "partials/campaign.scss";
+@import "partials/dco-laius.scss";
+
+#main_wrapper{
+  background-color:#000000;
+  height:100vh;
+  width:100vw;
+  overflow:hidden;
+}
+.content{
+  padding:1px;
+}
+.section_wrapper{
+  box-sizing:border-box;
+  overflow:hidden;
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%) translateY(0);
+  max-height:100vh;
+  max-width:100vw;
+  transition-duration:0.3s;
+}
+.section_displayed{
+  .content{
+    transform:translateY(0vh);
+  }
+}
+.section_hidden{
+  .content{
+    transform:translateY(110vh);
+  }
+}
+
+.button{
+  border:1px solid #ffffff;
+  color:#ffffff;
+  padding:6px 19px;
+  font-size:17px;
+  line-height: 17px;
+  border-radius:2px;
+  transition-duration:1s;
+}

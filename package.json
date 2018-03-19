@@ -1,7 +1,7 @@
 {
-  "name": "starter_little_image",
+  "name": "DCO_Generator",
   "version": "1.0.0",
-  "description": "Support starter with little image",
+  "description": "DCO Generator",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
@@ -38,6 +38,8 @@
     "jshint-stylish": "^2.2.1"
   },
   "dependencies": {
-    "jquery": "^3.2.1"
+    "animejs": "^2.2.0",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.5"
   }
 }

@@ -1,0 +1,47 @@
+#campaign{
+  position:relative;
+  width:100%;
+  background-color:#ffffff;
+  border:1px solid #808080;
+  *{
+    transition-duration:0.3s;
+  }
+}
+.campaign_sponsor{
+  padding:0 0 0 10px;
+  font-size:12px;
+  color:#4d4d4d;
+  line-height:20px;
+}
+.campaign_img_wrapper{
+  margin:0px 5px;
+}
+.campaign_img{
+  display:block;
+  width:100%;
+}
+.campaign_text_wrapper{
+  display:flex;
+  align-items:center;
+}
+.campaign_logo{
+  width:40px;
+  display:block;
+  margin:0 0 0 5px;
+}
+.campaign_wording_wrapper{
+  width:calc(100% - 40px);
+  box-sizing:border-box;
+  padding:10px 10px 20px 20px;
+}
+.campaign_title{
+  font-size:17px;
+}
+.campaign_description{
+  font-size:15px;
+  padding:5px 0 10px 0;
+}
+.campaign_addomain{
+  font-size:15px;
+  text-transform:uppercase;
+}

@@ -17,7 +17,7 @@ function uglifyIfNeeded() {
 }
 
 
-gulp.task("default", ["sass", "js", "images", "fonts", "html"], () => {
+gulp.task("default", ["sass", "js", "images", "fonts", "html", "datas"], () => {
 
   browserSync.init({
     server: {
@@ -31,8 +31,15 @@ gulp.task("default", ["sass", "js", "images", "fonts", "html"], () => {
 
   gulp.watch("src/scss/**/*.scss", ["sass"]);
 
+  gulp.watch("src/datas/*", ["datas"]);
+
   gulp.watch("src/images/*", ["images"]);
 
+});
+
+gulp.task("datas", () => {
+  gulp.src("src/datas/*")
+    .pipe(gulp.dest("./dist/datas/"))
 });
 
 gulp.task("fonts", () => {
