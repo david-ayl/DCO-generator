@@ -50,7 +50,7 @@ console.log("in");
       else {
         $(this).removeClass("section_display").addClass("section_hidden");
       }
-    })
+    });
 
   });
 
