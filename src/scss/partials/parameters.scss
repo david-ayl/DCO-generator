@@ -7,7 +7,7 @@
 
 .param_item_wrapper{
   display:flex;
-  justify-content:center;
+  justify-content:left;
   align-items: center;
 }
 
@@ -29,6 +29,10 @@
 .filter_title{
   color:#ffffff;
   font-size:14px;
+  display:block;
+  min-width:170px;
+  text-align:right;
+  padding:0 20px 0 0;
 }
 .campaign_wrapper{
   width:580px;
