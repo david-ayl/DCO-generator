@@ -42,7 +42,6 @@ $(document).ready(function() {
 
   $(document).on("click", ".toggle_containers", function() {
 
-console.log("in");
     $(".section_wrapper").each(function() {
       if($(this).hasClass("section_hidden")) {
         $(this).removeClass("section_hidden").addClass("section_display");
