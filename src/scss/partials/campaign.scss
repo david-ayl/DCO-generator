@@ -1,11 +1,15 @@
 #campaign{
   position:relative;
-  width:100%;
+  width:580px;
+  height:460px;
   background-color:#ffffff;
   border:1px solid #808080;
   *{
     transition-duration:0.3s;
   }
+}
+.campaign_wrapper{
+
 }
 .campaign_sponsor{
   padding:0 0 0 10px;
@@ -15,6 +19,7 @@
 }
 .campaign_img_wrapper{
   margin:0px 5px;
+  min-height:320px;
 }
 .campaign_img{
   display:block;
