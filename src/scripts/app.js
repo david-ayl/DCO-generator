@@ -6,8 +6,17 @@ var datas         = require("./modules/datas.js");
 var _             = require("lodash");
 var setState      = require("./modules/state.js");
 var setCampaign   = require("./modules/loadcampaigns.js");
+var jscrollify    = require("jquery-scrollify");
+
 
 $(document).ready(function() {
+
+  $(function() {
+    $.scrollify({
+      section : ".section_wrapper",
+      sectionName : "section-name"
+    });
+  });
 
 
   if(window.location.href.indexOf("?dev") !== -1) {
@@ -32,12 +41,6 @@ $(document).ready(function() {
     setState();
     setCampaign(window.state);
   });
-
-  var toggleWrapper = function() {
-
-
-
-  };
 
 
   $(document).on("click", ".toggle_containers", function() {

@@ -18,7 +18,6 @@ var elemanim = function(elem, content, delay) {
 
   anime({
     targets     : "#" + _elem,
-    delay       : 0,
     duration    : 200,
     translateX  : function() {
       if(direction == "right") {

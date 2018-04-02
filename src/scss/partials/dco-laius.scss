@@ -1,24 +1,29 @@
 @import "colors.scss";
 
-
+#laius_wrapper{
+  box-sizing: border-box;
+  padding:0 20%;
+  .content{
+    width:100%;
+  }
+}
 h1{
-  font-family: "Futura", sans-serif;
-  text-transform: uppercase;
-  color: #ffffff;
+  font-family: "Muli", sans-serif;
+  color: $blue;
   text-align:left;
   font-size:60px;
+  margin: 0 0 20px 0;
 }
 h2{
-  font-family: "Futura", sans-serif;
+  font-family: "Muli", sans-serif;
   font-size:30px;
-  color:#ffffff;
-  opacity:.6;
+  color:#000000;
   text-align:left;
   margin: 0;
 }
 p{
   font-family: "Muli", sans-serif;
-  color: #ffffff;
+  color: #818181;
   text-align:justify;
   font-size:20px;
   line-height: 24px;
