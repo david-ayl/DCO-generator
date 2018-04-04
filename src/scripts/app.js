@@ -7,9 +7,14 @@ var _             = require("lodash");
 var setState      = require("./modules/state.js");
 var setCampaign   = require("./modules/loadcampaigns.js");
 var jscrollify    = require("jquery-scrollify");
+var position      = require("./modules/position.js");
 
 
 $(document).ready(function() {
+
+  console.log(position($("#DCO_wrapper > div.campaign_wrapper.right_content > div.params_wrapper > div.filters_wrapper > div:nth-child(1) > div > div:nth-child(2)")));
+
+  console.log($("#DCO_wrapper > div.campaign_wrapper.right_content > div.params_wrapper > div.filters_wrapper > div:nth-child(1) > div > div:nth-child(2)"), $("#DCO_wrapper > div.campaign_wrapper.right_content > div.params_wrapper > div.filters_wrapper > div:nth-child(1) > div > div:nth-child(2)").position());
 
   $(function() {
     $.scrollify({
