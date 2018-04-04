@@ -3,6 +3,7 @@
 @import "partials/parameters.scss";
 @import "partials/campaign.scss";
 @import "partials/dco-laius.scss";
+@import "partials/svg.scss";
 
 #main_wrapper{
   width:100%;
@@ -24,18 +25,18 @@
   width: 100%;
 }
 .button{
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  padding: 0px 19px;
+  font-weight: 400;
+  text-decoration:none;
+  border: 1px solid #000000;
+  color: #000000;
+  padding: 6px 19px;
   font-size: 17px;
-  line-height: 34px;
-  border-radius: 2px;
+  line-height: 17px;
   transition-duration: 1s;
   margin: 0 0 10px 0;
-  display: inline-block;
   cursor:pointer;
   &:hover{
-    background-color:#ffffff;
-    color:#000000;
+    background-color:#000000;
+    color:#ffffff;
   }
 }

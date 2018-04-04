@@ -63,55 +63,71 @@
         <div id="main">
 
           <div class="section_wrapper" id="laius_wrapper">
-            <div class="content">
-              <h1>DCO generator</h1>
-              <h2>Native dynamic content optimization</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div class="left_content">
+
+            </div>
+            <div class="right_content">
+              <div class="content">
+                <h1>DCO generator</h1>
+                <h2>Native dynamic content optimization</h2>
+                <p class="laius">ADYOULIKE and ADventori announce a technological partnership allowing to personalize the formats of Native Advertising in real time, according to the profile and the situation of the Net surfer. Naturally integrated into the editorial environment and respectful of the user experience, native ads can now offer an even more relevant message, closer to the needs of the user and the business objectives of the advertiser. By combining Dynamic Creative Optimization (DCO) with native, read-only formats, ADYOULIKE and ADventori want to improve campaign performance and give Internet users, advertisers, and publishers an optimal experience.</p>
+                <a class="button" href="#" id="to_generator">Try the generator</a>
+              </div>
             </div>
           </div>
 
           <div class="section_wrapper" id="DCO_wrapper">
-              <div class="params_wrapper">
+              <div class="left_content"></div>
+              <div class="campaign_wrapper right_content">
 
-                <div class="param_item_wrapper">
-                  <h2>Filters section</h2>
-                  <p>Change the filters bellow to adapt the native advertising content</p>
+                <div class="params_wrapper">
+
+                  <div data-entry="campaign" class="param_item_wrapper advertisers_wrapper">
+                    <span class="filter_title">Advertiser : </span>
+                    <div data-filter="0" class="param_item">Mercedes</div>
+                    <div data-filter="1" class="param_item">Uniqlo</div>
+                    <div data-filter="2" class="param_item">Starbucks</div>
+                  </div>
+
+                  <div class="filters_wrapper">
+                    <div data-entry="Geolocation" class="param_item_wrapper">
+                      <span class="filter_title">Geo : </span>
+                      <div class="filters_group">
+                        <div data-filter="ny" class="param_item">New-York</div>
+                        <div data-filter="paris" class="param_item">Paris</div>
+                        <div data-filter="london" class="param_item">London</div>
+                      </div>
+                    </div>
+
+                    <div data-entry="Weather" class="param_item_wrapper">
+                      <span class="filter_title">Weather : </span>
+                      <div class="filters_group">
+                        <div data-filter="cloudless" class="param_item">Cloudless</div>
+                        <div data-filter="rainy" class="param_item">Rainy</div>
+                      </div>
+                    </div>
+
+                    <div data-entry="User-Profil" class="param_item_wrapper">
+                      <span class="filter_title">User profile : </span>
+                      <div class="filters_group">
+                        <div data-filter="single" class="param_item">Single</div>
+                        <div data-filter="family" class="param_item">Family</div>
+                      </div>
+                    </div>
+
+                    <div data-entry="Time" class="param_item_wrapper">
+                      <span class="filter_title">Time : </span>
+                      <div class="filters_group">
+                        <div data-filter="day" class="param_item">Day</div>
+                        <div data-filter="night" class="param_item">Night</div>
+                      </div>
+                    </div>
+                    <svg id="svg_paths" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="80" x2="400" y1="80" y2="20" stroke="black" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter"/>
+                    </svg>
+                  </div>
+
                 </div>
-
-                <div data-entry="campaign" class="param_item_wrapper">
-                  <span class="filter_title">Advertiser : </span>
-                  <div data-filter="0" class="param_item icon">Mercedes</div>
-                  <div data-filter="1" class="param_item icon">Uniqlo</div>
-                  <div data-filter="2" class="param_item icon">Starbucks</div>
-                </div>
-
-                <div data-entry="Geolocation" class="param_item_wrapper">
-                  <span class="filter_title">Geo : </span>
-                  <div data-filter="ny" class="param_item icon">New-York</div>
-                  <div data-filter="paris" class="param_item icon">Paris</div>
-                  <div data-filter="london" class="param_item icon">London</div>
-                </div>
-
-                <div data-entry="Weather" class="param_item_wrapper">
-                  <span class="filter_title">Weather : </span>
-                  <div data-filter="cloudless" class="param_item icon">Cloudless</div>
-                  <div data-filter="rainy" class="param_item icon">Rainy</div>
-                </div>
-
-                <div data-entry="User-Profil" class="param_item_wrapper">
-                  <span class="filter_title">User profile : </span>
-                  <div data-filter="single" class="param_item icon">Single</div>
-                  <div data-filter="family" class="param_item icon">Family</div>
-                </div>
-
-                <div data-entry="Time" class="param_item_wrapper">
-                  <span class="filter_title">Time : </span>
-                  <div data-filter="day" class="param_item icon">Day</div>
-                  <div data-filter="night" class="param_item icon">Night</div>
-                </div>
-
-              </div>
-              <div class="campaign_wrapper">
 
                 <div id="campaign">
                   <div class="campaign_sponsor"><span style="display:inline-block;">Sponsored by&nbsp;</span><span id="data-name" style="display:inline-block;" data-direction="top">name</span></div>

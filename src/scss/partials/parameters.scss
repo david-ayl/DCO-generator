@@ -3,25 +3,37 @@
 
 .params_wrapper{
   margin:0;
-  float:left;
-  padding:0px 75px 0px 25px;
-  min-width:400px;
-  box-sizing:border-box;
-  width:33%;
+}
+#DCO_wrapper{
+  display:flex;
+  .left_content{
+    height:100vh;
+    background-image: url("../images/bg.jpg");
+    background-size:auto 100%;
+    background-repeat: no-repeat;
+  }
+}
+.advertisers_wrapper{
+  &:after{
+    content:"";
+    display:block;
+    clear:both;
+  }
+}
+.filters_wrapper{
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  height:100vh;
-  background-image: url("http://public.adyoulike.com/generator-www/images/bg.jpg");
-  background-size:auto 100%;
-  background-repeat: no-repeat;
+  width:100%;
+  position:relative;
 }
 .param_item_wrapper{
+  box-sizing:border-box;
+  display:flex;
+  flex-direction: column;
+  width:25%;
   position: relative;
   margin:5px 0 0 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-  border-radius:4px;
+  background-color: rgba(0, 0, 0, 0.1);
   padding:10px;
   &:after{
     content:"";
@@ -29,31 +41,36 @@
     clear:both;
   }
 }
+.filters_group{
+  display:flex;
+  flex-direction: column;
+}
 .param_item{
   border-style:solid;
   border-width:1px;
   float:left;
   font-size: 13px;
-  padding: 6px 19px;
+  padding: 6px 0px;
+  text-align: center;
   font-weight: 900;
   cursor: pointer;
   transition-duration:0.3s;
   margin:0px;
 }
 [data-entry="campaign"] {
-  @include filterColor($green);
+  @include filterColor($blue);
 }
 [data-entry="Geolocation"] {
-  @include filterColor($yellow);
+  @include filterColor($blue);
 }
 [data-entry="Weather"] {
-  @include filterColor($orange);
+  @include filterColor($blue);
 }
 [data-entry="Time"] {
   @include filterColor($blue);
 }
 [data-entry="User-Profil"] {
-  @include filterColor($purple);
+  @include filterColor($blue);
 }
 .filter_title{
   text-transform: uppercase;

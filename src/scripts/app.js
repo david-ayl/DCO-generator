@@ -13,8 +13,7 @@ $(document).ready(function() {
 
   $(function() {
     $.scrollify({
-      section : ".section_wrapper",
-      sectionName : "section-name"
+      section : ".section_wrapper"
     });
   });
 
@@ -43,7 +42,8 @@ $(document).ready(function() {
   });
 
 
-  $(document).on("click", ".toggle_containers", function() {
+  $(document)
+  .on("click", ".toggle_containers", function() {
 
     $(".section_wrapper").each(function() {
       if($(this).hasClass("section_hidden")) {
@@ -53,6 +53,10 @@ $(document).ready(function() {
         $(this).removeClass("section_display").addClass("section_hidden");
       }
     });
+
+  })
+  .on("click", "#to_generator", function() {
+    $.scrollify.move("#2");
 
   });
 
