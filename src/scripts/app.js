@@ -12,27 +12,15 @@ var position      = require("./modules/position.js");
 
 $(document).ready(function() {
 
+  var drawPath = function() {
+    $("#svg_paths").empty();
+    position($($(".filters_group")[0]).find(".active"), $($(".filters_group")[1]).find(".active"), $(".filters_wrapper"));
+    position($($(".filters_group")[1]).find(".active"), $($(".filters_group")[2]).find(".active"), $(".filters_wrapper"));
+    position($($(".filters_group")[2]).find(".active"), $($(".filters_group")[3]).find(".active"), $(".filters_wrapper"));
+  };
+
   setTimeout(function() {
-/*
-    for(var i = 0; i < $(".filters_group").length; i++) {
-
-      console.log(
-        position($($(".filters_group")[i]), $($(".filters_group")[i + 1]))
-      );
-
-      if(i === $(".filters_group").length) { return; }
-      position($($(".filters_group")[i]).find(".active"), $($(".filters_group")[i + 1]).find(".active"));
-
-    }
-
-
-  position($('[data-filter="ny"]'), $('[data-filter="cloudless"]'));
-  position($('[data-filter="cloudless"]'), $('[data-filter="single"]'));
-  position($('[data-filter="single"]'), $('[data-filter="day"]'));
-*/
-
-  position($('[data-filter="cloudless"]'), $('[data-filter="single"]'), $(".filters_wrapper"));
-
+    drawPath();
   }, 500);
 
   $(function() {
@@ -61,6 +49,7 @@ $(document).ready(function() {
       return;
     }
     $(this).toggleClass("active");
+    drawPath()
     setState();
     setCampaign(window.state);
   });
