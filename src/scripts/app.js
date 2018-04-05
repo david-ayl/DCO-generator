@@ -12,9 +12,28 @@ var position      = require("./modules/position.js");
 
 $(document).ready(function() {
 
-  console.log(position($("#DCO_wrapper > div.campaign_wrapper.right_content > div.params_wrapper > div.filters_wrapper > div:nth-child(1) > div > div:nth-child(2)")));
+  setTimeout(function() {
+/*
+    for(var i = 0; i < $(".filters_group").length; i++) {
 
-  console.log($("#DCO_wrapper > div.campaign_wrapper.right_content > div.params_wrapper > div.filters_wrapper > div:nth-child(1) > div > div:nth-child(2)"), $("#DCO_wrapper > div.campaign_wrapper.right_content > div.params_wrapper > div.filters_wrapper > div:nth-child(1) > div > div:nth-child(2)").position());
+      console.log(
+        position($($(".filters_group")[i]), $($(".filters_group")[i + 1]))
+      );
+
+      if(i === $(".filters_group").length) { return; }
+      position($($(".filters_group")[i]).find(".active"), $($(".filters_group")[i + 1]).find(".active"));
+
+    }
+
+
+  position($('[data-filter="ny"]'), $('[data-filter="cloudless"]'));
+  position($('[data-filter="cloudless"]'), $('[data-filter="single"]'));
+  position($('[data-filter="single"]'), $('[data-filter="day"]'));
+*/
+
+  position($('[data-filter="cloudless"]'), $('[data-filter="single"]'), $(".filters_wrapper"));
+
+  }, 500);
 
   $(function() {
     $.scrollify({

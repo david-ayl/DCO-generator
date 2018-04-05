@@ -1,30 +1,53 @@
 var $ = require("jquery");
 
 
-function coo(elem) {
+function cooStart(elemStart, elemEnd, relativeParent) {
 
-  var sx = $(elem).position().left + $(elem).width(),
-      sy = $(elem).position().top + ($(elem).height() / 2),
-      ex = $(elem).position().left;
-  var coo = {
-    startX : sx,
-    startY : sy,
-    endX : ex,
-    endY : sy
+  console.log("top =", elemStart.offset().top - relativeParent.offset().top);
+  console.log("left =", elemStart.offset().left - relativeParent.offset().left);
+
+  var cooStart = {
+    startX : elemStart.offset().left - relativeParent.offset().left,
+    startY : elemStart.offset().top - relativeParent.offset().top
   };
 
-  var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-  line.setAttribute("x1", coo.startX);
-  line.setAttribute("x2", coo.startY);
-  line.setAttribute("y1", coo.endX);
-  line.setAttribute("y2", coo.endY);
-  line.setAttribute("stroke", "black");
-  line.setAttribute("stroke-width", "2");
+  var cooStep = {
+    startX : cooStart.startX + 11
+  }
+
+  var cooEnd = {
+    startX : elemEnd.offset().left - relativeParent.offset().left,
+    startY : elemEnd.offset().top - relativeParent.offset().top,
+    cooEnd : elemEnd.offset().top - relativeParent.offset().top
+  }
+
+/*
+  var cooStart = {
+    startX : $(elemStart).position().left + $(elemStart).width() + 2,
+    startY : $(elemStart).position().top + $(elemStart).height() + 2,
+    endX : $(elemStart).position().left + $(elemStart).width() + 22
+  };
+
+  var cooStep = {
+    startX : cooStart.startX + 11
+  }
+
+  var cooEnd = {
+    startX : $(elemEnd).position().left + $(elemEnd).width() + 2,
+    startY : $(elemEnd).position().top + $(elemEnd).height() + 2,
+    endX : $(elemEnd).position().left + $(elemEnd).width() + 22
+  }
+*/
+  var line = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+  line.setAttribute("points", cooStart.startX + " " + cooStart.startY + " " + cooStep.startX + " " + cooStart.startY + " " + cooStep.startX + " " + cooEnd.startY + " " + cooEnd.endX + " " + cooEnd.startY);
+  line.setAttribute("stroke", "#199cb6");
+  line.setAttribute("stroke-width", "3");
   line.setAttribute("stroke-linecap", "butt");
   line.setAttribute("stroke-linejoin", "miter");
+  line.setAttribute("fill", "none");
   $("#svg_paths").append(line);
 
 }
 
 
-module.exports = coo;
+module.exports = cooStart;
