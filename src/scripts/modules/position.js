@@ -28,10 +28,10 @@ function cooStart(elemStart, elemEnd, relativeParent) {
 
   var line = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
   line.setAttribute("points", cooStart.startX + " " + cooStart.startY + " " + cooStep1.startX + " " + cooStep1.startY + " " + cooStep2.startX + " " + cooStep2.startY + " " + cooEnd.startX + " " + cooEnd.startY);
-  line.setAttribute("stroke", "#199cb6");
+  line.setAttribute("stroke", "#51baa2");
   line.setAttribute("stroke-width", strokeWidth);
   line.setAttribute("stroke-linecap", "butt");
-  line.setAttribute("stroke-linejoin", "miter");
+  line.setAttribute("stroke-linejoin", "bevel");
   line.setAttribute("fill", "none");
   $("#svg_paths").append(line);
 

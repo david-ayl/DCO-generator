@@ -37,13 +37,13 @@ $(document).ready(function() {
     loader();
   }
 
-  $(".param_item:first-of-type").addClass("active");
+  $("[data-filter]:first-of-type").addClass("active");
 
   setState();
   setCampaign(window.state);
-  $(document).on("click", ".param_item", function() {
+  $(document).on("click", "[data-filter]", function() {
     if(!$(this).hasClass("active")) {
-      $(this).closest(".param_item_wrapper").find(".active").removeClass("active");
+      $(this).closest("[data-entry]").find(".active").removeClass("active");
     }
     else{
       return;
