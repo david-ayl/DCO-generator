@@ -7,21 +7,28 @@ var _             = require("lodash");
 var setState      = require("./modules/state.js");
 var setCampaign   = require("./modules/loadcampaigns.js");
 var jscrollify    = require("jquery-scrollify");
-var position      = require("./modules/position.js");
+var path          = require("./modules/path.js");
 
 
 $(document).ready(function() {
 
   var drawPath = function() {
     $("#svg_paths").empty();
-    position($($(".filters_group")[0]).find(".active"), $($(".filters_group")[1]).find(".active"), $(".filters_wrapper"));
-    position($($(".filters_group")[1]).find(".active"), $($(".filters_group")[2]).find(".active"), $(".filters_wrapper"));
-    position($($(".filters_group")[2]).find(".active"), $($(".filters_group")[3]).find(".active"), $(".filters_wrapper"));
+    path($($(".filters_group")[0]).find(".active"), $($(".filters_group")[1]).find(".active"), $(".campaign_wrapper"));
+    path($($(".filters_group")[1]).find(".active"), $($(".filters_group")[2]).find(".active"), $(".campaign_wrapper"));
+    path($($(".filters_group")[2]).find(".active"), $($(".filters_group")[3]).find(".active"), $(".campaign_wrapper"));
+    path($($(".filters_group")[3]).find(".active"), $("#wayout"), $(".campaign_wrapper"));
+    path($("#wayout"), $("#wayin"), $(".campaign_wrapper"));
+    path($("#wayin"), $("#wayinto"), $(".campaign_wrapper"));
   };
 
   setTimeout(function() {
     drawPath();
   }, 500);
+
+  $(window).resize(function() {
+    drawPath();
+  });
 
   $(function() {
     $.scrollify({

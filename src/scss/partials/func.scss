@@ -14,7 +14,7 @@
   .param_item{
     color:$color;
     border-color: $color;
-    &.active{
+    &.active, &:hover{
       background-color: $color;
       color: #ffffff;
     }

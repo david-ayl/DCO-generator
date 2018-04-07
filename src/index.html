@@ -77,19 +77,18 @@
           </div>
 
           <div class="section_wrapper" id="DCO_wrapper">
-              <div class="left_content"></div>
-              <div class="campaign_wrapper right_content">
-
+              <div class="campaign_wrapper">
+                    <svg id="svg_paths" xmlns="http://www.w3.org/2000/svg"></svg>
                 <div class="params_wrapper">
 
-                  <span class="group_title">Select an advertiser : </span>
+                  <span class="group_title advertiser_title">Select an advertiser : </span>
                   <div data-entry="campaign" class="advertisers_wrapper">
                     <div data-filter="0" class="advertiser_filter">Mercedes</div>
                     <div data-filter="1" class="advertiser_filter">Uniqlo</div>
                     <div data-filter="2" class="advertiser_filter">Starbucks</div>
                   </div>
 
-                  <span class="group_title">Select contextual filters : </span>
+                  <span class="group_title filters_title">Select contextual filters : </span>
                   <div class="filters_wrapper">
                     <div data-entry="Geolocation" class="param_item_wrapper">
                       <span class="filter_title">Geo : </span>
@@ -121,11 +120,9 @@
                       <div class="filters_group">
                         <div data-filter="day" class="param_item">Day</div>
                         <div data-filter="night" class="param_item">Night</div>
+                        <div id="wayout"></div>
                       </div>
                     </div>
-                    <svg id="svg_paths" xmlns="http://www.w3.org/2000/svg">
-
-                    </svg>
                   </div>
 
                 </div>
@@ -133,7 +130,7 @@
                 <div id="campaign">
                   <div class="campaign_sponsor"><span style="display:inline-block;">Sponsored by&nbsp;</span><span id="data-name" style="display:inline-block;" data-direction="top">name</span></div>
                   <div class="campaign_img_wrapper" id="anim_img" >
-                    <img class="campaign_img" data-direction="right" id="data-image" src="images/bg.jpg">
+                    <img class="campaign_img" data-direction="left" id="data-image" src="images/bg.jpg">
                   </div>
                   <div class="campaign_text_wrapper">
                     <img class="campaign_logo" data-direction="left" id="data-logo" src="images/bg.jpg">
@@ -143,6 +140,8 @@
                       <div class="campaign_addomain" data-direction="right" id="data-domain">truc.com</div>
                     </div>
                   </div>
+                  <div id="wayin" style="width: 0px;height: 100%;position:absolute;top:50%;right:-40px;transform:translateX(-50%) translateY(-50%)"></div>
+                  <div id="wayinto" style="width: 0px;height: 100%;position:absolute;top:50%;right:0px;transform:translateX(-50%) translateY(-50%)"></div>
                 </div>
 
               </div>
