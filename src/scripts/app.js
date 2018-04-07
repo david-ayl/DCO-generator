@@ -56,7 +56,7 @@ $(document).ready(function() {
       return;
     }
     $(this).toggleClass("active");
-    drawPath()
+    drawPath();
     setState();
     setCampaign(window.state);
   });

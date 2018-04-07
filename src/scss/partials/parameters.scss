@@ -34,6 +34,7 @@
   max-width: 960px;
 }
 #DCO_wrapper{
+  position: relative;
   overflow: hidden;
   display:flex;
   .left_content{
@@ -71,6 +72,7 @@
   }
 }
 .group_title{
+  color: #000000;
   font-size:18px;
   display:block;
   margin: 20px 0 10px 0;
@@ -86,12 +88,12 @@
   text-align: center;
   cursor:pointer;
   font-size: 13px;
-  color: $orange;
+  color: #000000;
   padding: 7px 0;
-  border: 1px solid $orange;
+  border: 1px solid #000000;
   transition-duration: 0.3s;
   &:hover, &.active{
-    background-color: $orange;
+    background-color: #000000;
     color: #ffffff;
   }
 }
@@ -101,6 +103,7 @@
   flex-direction: column;
 }
 .param_item{
+  background-color: #ffffff;
   border-style:solid;
   border-width:1px;
   border-top-width: 0px;
@@ -116,27 +119,16 @@
     border-top-width: 1px;
   }
 }
-[data-entry="campaign"] {
-  @include filterColor(#000000);
-}
-[data-entry="Geolocation"] {
-  @include filterColor(#000000);
-}
-[data-entry="Weather"] {
-  @include filterColor(#000000);
-}
-[data-entry="Time"] {
-  @include filterColor(#000000);
-}
-[data-entry="User-Profil"] {
+[data-entry] {
   @include filterColor(#000000);
 }
 .filter_title{
+  color: #000000;
   text-transform: uppercase;
-  font-size:14px;
+  font-size:13px;
   display:block;
   min-width:170px;
-  text-align:left;
-  padding:0 20px 0 0;
+  text-align:center;
+  padding:0;
   margin:0px 0 7px 0;
 }

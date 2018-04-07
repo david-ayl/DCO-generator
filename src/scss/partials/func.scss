@@ -8,10 +8,8 @@
 }
 
 @mixin filterColor($color) {
-  .filter_title{
-    color: $color;
-  }
   .param_item{
+    background-color: transparent;
     color:$color;
     border-color: $color;
     &.active, &:hover{
