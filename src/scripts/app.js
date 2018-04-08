@@ -8,10 +8,45 @@ var setState      = require("./modules/state.js");
 var setCampaign   = require("./modules/loadcampaigns.js");
 var jscrollify    = require("jquery-scrollify");
 var path          = require("./modules/path.js");
-var gradient      = require("./modules/gradient.js");
-
+var Granim        = require("granim");
 
 $(document).ready(function() {
+
+  var colorsSet = ["#51baa2", "#199cb6", "#ee7444", "#77A6B6", "#fc7a57"];
+
+  var granimInstance = new Granim({
+    element: '#granim-canvas',
+    direction: 'diagonal',
+    opacity: [1, 1],
+    isPausedWhenNotInView: true,
+    stateTransitionSpeed: 500,
+    states : {
+      "default-state": {
+        gradients: [
+          ['#B3FFAB', '#12FFF7'],
+          ['#ADD100', '#7B920A']
+        ],
+        transitionSpeed: 1000,
+        loop: false
+      },
+      "violet-state": {
+        gradients: [
+          ['#9D50BB', '#6E48AA'],
+          ['#4776E6', '#8E54E9']
+        ],
+        transitionSpeed: 1000,
+        loop: false
+      },
+      "orange-state": {
+        gradients: [
+          ['#FF4E50', '#F9D423'],
+          ["#199cb6", "#ee7444"]
+        ],
+        transitionSpeed: 1000,
+        loop: false
+      }
+    }
+  });
 
   var drawPath = function() {
     $("#svg_paths").empty();
@@ -56,11 +91,11 @@ $(document).ready(function() {
     else{
       return;
     }
+    granimInstance.changeState("violet-state");
     $(this).toggleClass("active");
     drawPath();
     setState();
     setCampaign(window.state);
-    gradient("#DCO_wrapper");
   });
 
 
