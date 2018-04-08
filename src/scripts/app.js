@@ -8,6 +8,7 @@ var setState      = require("./modules/state.js");
 var setCampaign   = require("./modules/loadcampaigns.js");
 var jscrollify    = require("jquery-scrollify");
 var path          = require("./modules/path.js");
+var gradient      = require("./modules/gradient.js");
 
 
 $(document).ready(function() {
@@ -59,6 +60,7 @@ $(document).ready(function() {
     drawPath();
     setState();
     setCampaign(window.state);
+    gradient("#DCO_wrapper");
   });
 
 
@@ -76,6 +78,7 @@ $(document).ready(function() {
 
   })
   .on("click", "#to_generator", function() {
+
     $.scrollify.move("#2");
 
   });

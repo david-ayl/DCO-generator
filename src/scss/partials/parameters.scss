@@ -34,13 +34,10 @@
   max-width: 960px;
 }
 #DCO_wrapper{
+  transition-duration:0.1s;
   position: relative;
   overflow: hidden;
   display:flex;
-  .left_content{
-    height:100vh;
-    background-image: url("../images/bg.jpg");
-  }
 }
 .filters_wrapper{
   display: flex;
