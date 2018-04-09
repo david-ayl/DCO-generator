@@ -12,35 +12,41 @@ var Granim        = require("granim");
 
 $(document).ready(function() {
 
-  var colorsSet = ["#51baa2", "#199cb6", "#ee7444", "#77A6B6", "#fc7a57"];
+  var randColorArrays = function() {
+    var colorsSetleft = ["#51baa2", "#199cb6", "#77A6B6",  "#93FEF2", "#87E2B4"];
+    var colorsSetRight = ["#FFD993", "#E2B1C4", "#E2A488", "#D09648", "#9FB500"];
+    var arr = [];
+    var col1 = colorsSetleft[Math.floor(Math.random()*colorsSetleft.length)];
+    arr.push(col1);
+    var col2 = colorsSetRight[Math.floor(Math.random()*colorsSetRight.length)];
+    arr.push(col2);
+    return arr;
+  };
 
   var granimInstance = new Granim({
     element: '#granim-canvas',
     direction: 'diagonal',
-    opacity: [1, 1],
+    opacity: [1, 1, 1],
     isPausedWhenNotInView: true,
     stateTransitionSpeed: 500,
     states : {
       "default-state": {
         gradients: [
-          ['#B3FFAB', '#12FFF7'],
-          ['#ADD100', '#7B920A']
+          ['#51baa2', '#FFD993']
         ],
         transitionSpeed: 1000,
         loop: false
       },
-      "violet-state": {
+      "state-1": {
         gradients: [
-          ['#9D50BB', '#6E48AA'],
-          ['#4776E6', '#8E54E9']
+          ["#199cb6", '#6E48AA']
         ],
         transitionSpeed: 1000,
         loop: false
       },
-      "orange-state": {
+      "state-2": {
         gradients: [
-          ['#FF4E50', '#F9D423'],
-          ["#199cb6", "#ee7444"]
+          ['#bada55', '#1a9dd7']
         ],
         transitionSpeed: 1000,
         loop: false
@@ -91,7 +97,24 @@ $(document).ready(function() {
     else{
       return;
     }
-    granimInstance.changeState("violet-state");
+    if($(this).closest(".filters_wrapper").attr("data-colors") == "state-1") {
+
+      $(this).closest(".filters_wrapper").attr("data-colors", "state-2");
+
+      granimInstance.states["state-1"].gradients[0] = randColorArrays();
+
+      granimInstance.changeState("state-1");
+
+    }
+    else {
+
+      $(this).closest(".filters_wrapper").attr("data-colors", "state-1");
+
+      granimInstance.states["state-2"].gradients[0] = randColorArrays();
+
+      granimInstance.changeState("state-2");
+
+    }
     $(this).toggleClass("active");
     drawPath();
     setState();
