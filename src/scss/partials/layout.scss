@@ -9,7 +9,10 @@
 }
 
 /* General */
-
+.flex{
+  display:flex;
+  align-items: center;
+}
 .section_wrapper{
   box-sizing: border-box;
   padding:0;
@@ -51,7 +54,7 @@ h1 {
 h2 {
   font-size:32px;
   font-weight:200;
-  color:#000000;
+  color:#ffffff;
   margin-top:27px;
   margin-bottom:8px;
 }
