@@ -41,3 +41,87 @@
     color:#ffffff;
   }
 }
+@media only screen and (max-width: 414px) {
+  #laius_wrapper{
+    display: block;
+    .left_content{
+      background-image: url("../images/bg_mobile.jpg");
+      background-size: 100% 100%;
+      float: none;
+      width: 100%;
+      height:30%;
+    }
+    .right_content{
+      float:none;
+      width:100%;
+      height:70%;
+      padding: 0 20px;
+    }
+    .laius{
+      padding:0;
+    }
+  }
+  .change_brand_wrapper{
+    padding: 5px 20px;
+  }
+  h1{
+    font-size: 40px;
+    line-height:42px;
+  }
+  h2{
+    font-size: 26px;
+  }
+  p{
+    font-size:14px;
+    line-height: 18px;
+  }
+  .advertiser_title{
+    min-width: unset;
+    width:50%;
+  }
+  .advertisers_wrapper{
+    width: 50%;
+  }
+  .filter_title{
+    min-width: unset;
+    height:30px;
+  }
+  .main_filters_wrapper{
+    padding: 0;
+  }
+  #campaign{
+    width:300px;
+    height:300px;
+    padding:1px 0 0 0;
+  }
+  .campaign_sponsor{
+    top:-20px;
+    font-size:11px;
+    color: #000000;
+  }
+  .campaign_img_wrapper{
+    width:290px;
+    float:none;
+  }
+  .campaign_wording_wrapper{
+    padding: 0 10px  0 20px;
+  }
+  .campaign_text_wrapper{
+    height: auto;
+  }
+  .campaign_title{
+    font-size:14px;
+    height:32px;
+  }
+  .campaign_description{
+    height: 58px;
+    font-size: 13px;
+    padding: 5px 0 5px 0;
+  }
+  #wayout{
+    right:-5px;
+  }
+  #wayin{
+    right: -5px;
+  }
+}
