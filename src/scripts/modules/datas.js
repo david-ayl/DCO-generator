@@ -13,7 +13,7 @@ var datas = [
       "single-day-cloudless" : "images/mercedes/single-day-cloudless.jpg",
       "single-day-rainy" : "images/mercedes/single-day-rainy.jpg",
       "single-night-cloudless" : "images/mercedes/single-night-cloudless.jpg",
-      "single-night-rainy" : "images/mercedes/single-night-rainy.jpg"
+      "single-night-rainy" : "single-night-rainy"
     },
 
     "wording" : {
@@ -22,24 +22,22 @@ var datas = [
         "family-day-rainy-ny" : "The V-Class: From the peaks to the beach, whatever the conditions.",
         "family-night-cloudless-ny" : "The V-Class : the spacious sedan with the star.",
         "family-night-rainy-ny" : "The V-Class : the spacious sedan with the star, whatever the conditions.",
-        "single-day-cloudless-ny" : "The C-CLass, driving performance.",
-        "single-day-rainy-ny" : "The C-CLass, driving performance, whatever the conditions.",
-        "single-night-cloudless-ny" : "The C-CLass, driving performance.",
-        "single-night-rainy-ny" : "The C-CLass, driving performance, whatever the conditions.",
-
         "family-day-cloudless-paris" : "The V-Class: From the peaks to the beach.",
         "family-day-rainy-paris" : "The V-Class: From the peaks to the beach, whatever the conditions.",
         "family-night-cloudless-paris" : "The V-Class : the spacious sedan with the star.",
         "family-night-rainy-paris" : "The V-Class : the spacious sedan with the star, whatever the conditions.",
-        "single-day-cloudless-paris" : "The C-CLass, driving performance.",
-        "single-day-rainy-paris" : "The C-CLass, driving performance, whatever the conditions.",
-        "single-night-cloudless-paris" : "The C-CLass, driving performance.",
-        "single-night-rainy-paris" : "The C-CLass, driving performance, whatever the conditions.",
-
         "family-day-cloudless-london" : "The V-Class: From the peaks to the beach.",
         "family-day-rainy-london" : "The V-Class: From the peaks to the beach, whatever the conditions.",
         "family-night-cloudless-london" : "The V-Class : the spacious sedan with the star.",
         "family-night-rainy-london" : "The V-Class : the spacious sedan with the star, whatever the conditions.",
+        "single-day-cloudless-ny" : "The C-CLass, driving performance.",
+        "single-day-rainy-ny" : "The C-CLass, driving performance, whatever the conditions.",
+        "single-night-cloudless-ny" : "The C-CLass, driving performance.",
+        "single-night-rainy-ny" : "The C-CLass, driving performance, whatever the conditions.",
+        "single-day-cloudless-paris" : "The C-CLass, driving performance.",
+        "single-day-rainy-paris" : "The C-CLass, driving performance, whatever the conditions.",
+        "single-night-cloudless-paris" : "The C-CLass, driving performance.",
+        "single-night-rainy-paris" : "The C-CLass, driving performance, whatever the conditions.",
         "single-day-cloudless-london" : "The C-CLass, driving performance.",
         "single-day-rainy-london" : "The C-CLass, driving performance, whatever the conditions.",
         "single-night-cloudless-london" : "The C-CLass, driving performance.",
