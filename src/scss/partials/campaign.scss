@@ -34,12 +34,10 @@
   overflow: hidden;
   float:left;
   width:400px;
+  height:225px;
+  background-position:50% 50%;
+  background-size:cover;
   margin:5px;
-}
-.campaign_img{
-  transform: translateX(0%) translateY(0%);
-  display:block;
-  width:100%;
 }
 .campaign_text_wrapper{
   display:flex;
@@ -55,7 +53,7 @@
 .campaign_wording_wrapper{
   width:calc(100% - 40px);
   box-sizing:border-box;
-  padding:10px 10px 20px 20px;
+  padding:10px 30px 20px 20px;
 }
 .campaign_title{
   font-size:19px;

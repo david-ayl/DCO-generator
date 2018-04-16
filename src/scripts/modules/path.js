@@ -30,7 +30,7 @@ function cooStart(elemStart, elemEnd, relativeParent) {
   line.setAttribute("points", cooStart.startX + " " + cooStart.startY + " " + cooStep1.startX + " " + cooStep1.startY + " " + cooStep2.startX + " " + cooStep2.startY + " " + cooEnd.startX + " " + cooEnd.startY);
   line.setAttribute("stroke", "#000000");
   line.setAttribute("stroke-width", strokeWidth);
-  line.setAttribute("stroke-linecap", "round");
+  line.setAttribute("stroke-linecap", "square");
   line.setAttribute("stroke-linejoin", "bevel");
   line.setAttribute("fill", "none");
   $("#svg_paths").append(line);

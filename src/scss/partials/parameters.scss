@@ -129,6 +129,11 @@
     border-top-width: 1px;
   }
 }
+.moving{
+  .param_item{
+    cursor: default!important;
+  }
+}
 [data-entry] {
   @include filterColor(#000000);
 }

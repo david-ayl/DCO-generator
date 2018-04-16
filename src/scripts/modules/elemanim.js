@@ -10,6 +10,10 @@ var elemanim = function(elem, content, delay) {
     if(elem.attr("src")) {
       elem.attr("src", modif);
     }
+    else if(elem.attr("data-bg")) {
+      elem.attr("data-bg", modif);
+      elem.css("background-image", "url(" + modif + ")");
+    }
     else{
       elem.text(modif);
     }
@@ -48,7 +52,7 @@ var elemanim = function(elem, content, delay) {
 
   setTimeout(function() {
     modifElem(content);
-  }, 500);
+  }, 400);
 
 
 }

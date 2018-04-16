@@ -91,6 +91,10 @@ $(document).ready(function() {
   setState();
   setCampaign(window.state);
   $(document).on("click", "[data-filter]", function() {
+    if($("body").hasClass("moving")) {
+      return;
+    }
+
     if(!$(this).hasClass("active")) {
       $(this).closest("[data-entry]").find(".active").removeClass("active");
     }
