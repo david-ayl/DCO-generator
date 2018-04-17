@@ -91,7 +91,8 @@ $(document).ready(function() {
   setState();
   setCampaign(window.state);
   $(document).on("click", "[data-filter]", function() {
-    if($("body").hasClass("moving")) {
+    if($(".is_moving").length) {
+      console.log("still moving");
       return;
     }
 

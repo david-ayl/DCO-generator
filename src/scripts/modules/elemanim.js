@@ -23,6 +23,12 @@ var elemanim = function(elem, content, delay) {
   anime({
     targets     : "#" + _elem,
     duration    : 200,
+    begin       : function() {
+      elem.addClass("is_moving");
+    },
+    complete    : function() {
+      elem.removeClass("is_moving");
+    },
     translateX  : function() {
       if(direction == "right") {
         return 4000
